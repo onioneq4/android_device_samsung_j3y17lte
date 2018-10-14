@@ -15,6 +15,7 @@
 #
 
 LOCAL_PATH := device/samsung/j3y17lte
+BUILD_TOP := $(shell pwd)
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
@@ -47,6 +48,7 @@ TARGET_KERNEL_CONFIG := lineage-j3y17lte_defconfig
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
+KERNEL_TOOLCHAIN := $(BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_LINUX_KERNEL_VERSION := 3.18
 
