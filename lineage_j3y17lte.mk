@@ -17,9 +17,6 @@
 # Inherit device configuration
 $(call inherit-product, device/samsung/j3y17lte/device.mk)
 
-# Inherit from the 64 bit configuration
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
