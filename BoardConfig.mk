@@ -17,7 +17,7 @@
 LOCAL_PATH := device/samsung/j3y17lte
 
 # Include path
-TARGET_SPECIFIC_HEADER_PATH += $(LOCAL_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 # Firmware
 TARGET_NO_BOOTLOADER := true
