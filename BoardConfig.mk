@@ -15,6 +15,7 @@
 #
 
 LOCAL_PATH := device/samsung/j3y17lte
+TARGET_OTA_ASSERT_DEVICE := j3y17lte,j3y17ltexx
 BUILD_TOP := $(shell pwd)
 
 # Include path
@@ -79,5 +80,101 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Vendor separation
 TARGET_COPY_OUT_VENDOR := system/vendor
 
-# OTA
-TARGET_OTA_ASSERT_DEVICE := j3y17lte,j3y17ltexx
+# Samsung Hardware
+JAVA_SOURCE_OVERLAYS := \
+    org.lineageos.hardware|hardware/samsung/lineagehw|**/*.java \
+    org.lineageos.hardware|$(LOCAL_PATH)/lineagehw|**/*.java
+
+# Device Tree
+BOARD_USES_DT := true
+
+# Graphics
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+BOARD_USES_EXYNOS5_COMMON_GRALLOC := true
+
+# VR Front buffer
+#BOARD_USES_VR_FRONT_BUFFER := true
+
+# Samsung OpenMAX Video
+BOARD_USE_STOREMETADATA := true
+BOARD_USE_METADATABUFFERTYPE := true
+BOARD_USE_DMA_BUF := true
+BOARD_USE_ANB_OUTBUF_SHARE := true
+BOARD_USE_IMPROVED_BUFFER := true
+BOARD_USE_NON_CACHED_GRAPHICBUFFER := true
+BOARD_USE_GSC_RGB_ENCODER := true
+BOARD_USE_CSC_HW := false
+BOARD_USE_QOS_CTRL := false
+BOARD_USE_S3D_SUPPORT := true
+BOARD_USE_TIMESTAMP_REORDER_SUPPORT := false
+BOARD_USE_DEINTERLACING_SUPPORT := false
+BOARD_USE_VP8ENC_SUPPORT := true
+BOARD_USE_HEVCDEC_SUPPORT := true
+BOARD_USE_HEVCENC_SUPPORT := true
+BOARD_USE_HEVC_HWIP := false
+BOARD_USE_VP9DEC_SUPPORT := true
+BOARD_USE_VP9ENC_SUPPORT := false
+BOARD_USE_CUSTOM_COMPONENT_SUPPORT := true
+BOARD_USE_VIDEO_EXT_FOR_WFD_HDCP := false
+BOARD_USE_SINGLE_PLANE_IN_DRM := false
+
+# HWComposer
+BOARD_USES_VPP := true
+#BOARD_USES_VPP_V2 := true // 8890 only
+BOARD_HDMI_INCAPABLE := true
+
+# SCALER
+BOARD_USES_DEFAULT_CSC_HW_SCALER := true
+BOARD_USES_SCALER_M2M1SHOT := true
+
+# Video scaling issue workaround
+TARGET_OMX_LEGACY_RESCALING := true
+
+# HWCServices - requires framework support
+#BOARD_USES_HWC_SERVICES := true
+
+# WiFiDisplay
+#BOARD_USES_VIRTUAL_DISPLAY := true - depends on platform changes
+BOARD_USES_VIRTUAL_DISPLAY_DECON_EXT_WB := false
+BOARD_USE_VIDEO_EXT_FOR_WFD_DRM := false
+BOARD_USES_VDS_BGRA8888 := true
+BOARD_VIRTUAL_DISPLAY_DISABLE_IDMA_G0 := false
+
+# LIBHWJPEG
+TARGET_USES_UNIVERSAL_LIBHWJPEG := true
+
+# FIMG2D
+BOARD_USES_SKIA_FIMGAPI := true
+BOARD_USES_FIMGAPI_V5X := true
+
+# Samsung HALs
+TARGET_AUDIOHAL_VARIANT := samsung
+TARGET_POWERHAL_VARIANT := samsung
+
+# MACLOADER
+BOARD_HAVE_SAMSUNG_WIFI := true
+
+# Backlight
+BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
+
+# Recovery
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.samsungexynos7570
+
+# Charger
+BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_SHOW_PERCENTAGE := true
+CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
+
+# DT2W
+TARGET_TAP_TO_WAKE_NODE := /sys/class/sec/tsp/dt2w_enable
+
+# Wifi
+BOARD_WLAN_DEVICE                := slsi
+WPA_SUPPLICANT_VERSION           := VER_0_8_X
+BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_HOSTAPD_DRIVER             := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+PRODUCT_CFI_INCLUDE_PATHS += hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib

@@ -1,0 +1,136 @@
+# All blobs below are extracted from j3y17lte-user-9-PPR1.180610.011-J330FXXS4CUD3-release-keys
+
+# Audio
+lib/libaptX_encoder.so
+lib/libtfa98xx.so
+vendor/etc/Tfa9896.cnt
+
+# Camera
+lib/libexynoscamera.so
+lib/libexynoscamera3.so
+lib/libhwjpeg.so
+lib/libuniapi.so
+lib/libuniplugin.so
+vendor/firmware/setfile_3l2.bin
+vendor/firmware/setfile_5e3.bin
+
+# Camera HIDL
+lib/vendor.samsung.hardware.camera.device@1.0.so
+lib/vendor.samsung.hardware.camera.device@3.2.so
+lib/vendor.samsung.hardware.camera.device@3.3.so
+lib/vendor.samsung.hardware.camera.device@3.4.so
+lib/vendor.samsung.hardware.camera.provider@2.4.so
+lib/vendor.samsung.hardware.camera.provider@2.5.so
+vendor/lib/hw/vendor.samsung.hardware.camera.provider@2.4-impl.so
+vendor/lib/vendor.samsung.camera.device@1.0-impl.so
+vendor/lib/vendor.samsung.camera.device@3.2-impl.so
+vendor/lib/vendor.samsung.camera.device@3.3-impl.so
+vendor/lib/vendor.samsung.camera.device@3.4-impl.so
+
+# DRM
+vendor/bin/hw/android.hardware.drm@1.1-service.widevine
+vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
+vendor/lib/libwvhidl.so
+vendor/lib/mediadrm/libwvdrmengine.so
+
+# GPS
+lib/libfloatingfeature.so
+lib/vendor.samsung.hardware.gnss@1.0.so
+vendor/bin/hw/gpsd
+vendor/bin/hw/vendor.samsung.hardware.gnss@1.0-service
+vendor/etc/gnss/ca.pem
+vendor/etc/init/vendor.samsung.hardware.gnss@1.0-service.rc
+vendor/lib/hw/gps.default.so
+vendor/lib/hw/vendor.samsung.hardware.gnss@1.0-impl.so
+vendor/lib/libwrappergps.so
+
+# Graphics
+vendor/lib/egl/libGLES_mali.so
+
+# Media
+vendor/firmware/fimc_is_lib.bin
+vendor/firmware/mfc_fw.bin
+
+# Memtrack
+#vendor/lib/hw/memtrack.universal7570.so
+
+# OMX
+lib/libExynosOMX_Core.so
+lib/libExynosOMX_Resourcemanager.so
+lib/libstagefrighthw.so
+lib/omx/libOMX.Exynos.AVC.Decoder.so
+lib/omx/libOMX.Exynos.AVC.Encoder.so
+lib/omx/libOMX.Exynos.HEVC.Decoder.so
+lib/omx/libOMX.Exynos.HEVC.Encoder.so
+lib/omx/libOMX.Exynos.MPEG4.Decoder.so
+lib/omx/libOMX.Exynos.MPEG4.Encoder.so
+lib/omx/libOMX.Exynos.VP8.Decoder.so
+lib/omx/libOMX.Exynos.VP8.Encoder.so
+lib/omx/libOMX.Exynos.WMV.Decoder.so
+vendor/lib/libstagefright_omx_vendor.so
+
+# RIL
+etc/init/init.rilchip.rc
+etc/init/init.rilcommon.rc
+etc/init/init.rilepdg.rc
+lib/libsecril-client.so
+vendor/bin/cbd
+vendor/bin/hw/rild
+vendor/etc/init/init.vendor.rilchip.rc
+vendor/etc/init/init.vendor.rilcommon.rc
+vendor/lib/libril.so
+vendor/lib/libsec-ril-dsds.so
+vendor/lib/libsec-ril.so
+vendor/lib/vendor.samsung.hardware.radio@1.2_vendor.so
+
+# Sensors
+vendor/lib/hw/sensors.universal7570.so
+
+# Wifi
+vendor/etc/wifi/hydra_config.sdb
+vendor/etc/wifi/indoorchannel.info
+vendor/etc/wifi/mx
+vendor/etc/wifi/mx140.bin
+vendor/etc/wifi/mx140/debug/common/log-strings.bin
+vendor/etc/wifi/mx140/debug/hardware/moredump/Memory.xsd
+vendor/etc/wifi/mx140/debug/hardware/moredump/Registers.xsd
+vendor/etc/wifi/mx140/debug/hardware/moredump/bt_registers.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/cortexM4.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/cortexR4.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/moredump.bin
+vendor/etc/wifi/mx140/debug/hardware/moredump/moredump_memory.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/rf_chip_registers.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/wlan_sys_registers.xml
+vendor/etc/wifi/mx140/debug/wlan/hip_signals.xml
+vendor/etc/wifi/mx140/debug/wlan/id.txt
+vendor/etc/wifi/mx140/debug/wlan/mib_out.xml
+vendor/etc/wifi/mx140/debug/wlan/symbols.dbg
+vendor/etc/wifi/mx140/debug/wlan/unicli.dbg
+vendor/etc/wifi/mx140/debug/wlan/unitab.dbg
+vendor/etc/wifi/mx140/debug/wlan/univif.dbg
+vendor/etc/wifi/mx140/debug/wlan/xide_mib.dbg
+vendor/etc/wifi/mx140_bt.hcf
+vendor/etc/wifi/mx140_t.bin
+vendor/etc/wifi/mx140_t/debug/common/log-strings.bin
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/Memory.xsd
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/Registers.xsd
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/bt_registers.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/cortexM4.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/cortexR4.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/moredump.bin
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/moredump_memory.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/rf_chip_registers.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/wlan_sys_registers.xml
+vendor/etc/wifi/mx140_t/debug/wlan/hip_signals.xml
+vendor/etc/wifi/mx140_t/debug/wlan/id.txt
+vendor/etc/wifi/mx140_t/debug/wlan/mib_out.xml
+vendor/etc/wifi/mx140_t/debug/wlan/symbols.dbg
+vendor/etc/wifi/mx140_t/debug/wlan/unicli.dbg
+vendor/etc/wifi/mx140_t/debug/wlan/unitab.dbg
+vendor/etc/wifi/mx140_t/debug/wlan/univif.dbg
+vendor/etc/wifi/mx140_t/debug/wlan/xide_mib.dbg
+vendor/etc/wifi/mx140_t_wlan.hcf
+vendor/etc/wifi/mx140_t_wlan_t.hcf
+vendor/etc/wifi/mx140_wlan.hcf
+vendor/etc/wifi/mx140_wlan_t.hcf
+vendor/etc/wifi/platform.txt

@@ -1,2 +1,4 @@
 # Screen density
 ro.sf.lcd_density=320
+ro.opengles.version=196610
+
